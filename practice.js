@@ -165,7 +165,16 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr) {
+  let randomNumber = getRandomArbitrary()
+  let value = false;
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] === randomNumber) {
+      value = true;
+    } 
+  }
+  return value;
+}
 
 
 
