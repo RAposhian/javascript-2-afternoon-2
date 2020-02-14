@@ -98,7 +98,7 @@ function evenFinder(nums) {
     }
        
   }
-  return newArray;
+  return newArrgitay;
 }
 
 
@@ -203,8 +203,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item) {
+  for(let i = 0; i < myGroceryList.length; i++) {
+    if(myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1);
+    }
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item) {
+  myGroceryList.push(item);
+}
 
 
 ////////// PROBLEM 9 //////////
