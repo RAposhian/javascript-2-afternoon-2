@@ -98,7 +98,7 @@ function evenFinder(nums) {
     }
        
   }
-  return newArrgitay;
+  return newArray;
 }
 
 
@@ -204,16 +204,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, item) {
-  for(let i = 0; i < myGroceryList.length; i++) {
-    if(myGroceryList[i] === item) {
-      myGroceryList.splice(i, 1);
-    }
+  if(myGroceryList && item) {
+    let newArr = myGroceryList.filter(e => (e !== item) ? e : null);
+    return newArr;
+  } else {
+    return [];
   }
-  return myGroceryList;
 }
 
 function addItem(myGroceryList, item) {
-  myGroceryList.push(item);
+  
 }
 
 
