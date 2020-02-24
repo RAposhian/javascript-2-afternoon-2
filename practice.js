@@ -213,7 +213,12 @@ function removeItem(myGroceryList, item) {
 }
 
 function addItem(myGroceryList, item) {
-  
+  if (myGroceryList && item) {
+    myGroceryList.push(item);
+  } else {
+    return [];
+  }
+  return myGroceryList
 }
 
 
@@ -223,7 +228,13 @@ function addItem(myGroceryList, item) {
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+const maker = () => {
+  let arr = [];
+  for (let i = 1; i < 216; i++){
+    arr.push(i)
+  }
+  return arr
+}
 
 
 
@@ -239,8 +250,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
-
+const addTen = numbers => {
+let newArr = numbers.map(e => +e + 10);
+return newArr;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -264,7 +277,7 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+
 
 
 
